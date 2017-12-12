@@ -42,3 +42,28 @@ print find_second(danton, 'audace')
 
 #>>> 25
 
+#Ejercicio 17:
+# Define a procedure, bigger, that takes in
+# two numbers as inputs, and returns the
+# greater of the two inputs.
+
+
+def bigger(a, b):
+    if a > b:
+        return a
+    return b
+
+print bigger(6, 7)
+print bigger(8, 7)
+
+#otra posibilidad seria:
+
+def bigger(a,b):
+    if a > b:
+        return a
+    else:
+        return b
+
+print bigger(6, 7)
+print bigger(8, 7)
+
