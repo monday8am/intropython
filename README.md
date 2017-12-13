@@ -181,6 +181,7 @@ print biggest(3, 3, 9)
 print biggest(9, 3, 9)
 #>>> 9
 
+# Ejercicio 22:
 
 # Define a procedure, print_numbers, that takes
 # as input a positive whole number, and prints 
@@ -197,3 +198,94 @@ def print_numbers(a):
         print x
 
 print print_numbers(10)
+
+
+# Ejercicio 23 (no lo resolví):
+# Define a procedure, factorial, that
+# takes one number as its input
+# and returns the factorial of
+# that number.
+
+def factorial(n):
+    result = 1
+    while n >= 1:
+        result =  result*n       
+        n = n - 1
+    else: 
+        return result
+
+print factorial(4)
+
+#print factorial(4)
+#>>> 24
+#print factorial(5)
+#>>> 120
+#print factorial(6)
+#>>> 720
+
+# Ejercicio 27-28: 
+
+def get_next_target(page)
+    start_link = page.find("<href=")
+    start_quote = page.find('"', start_link)
+    end_quote = page.find ('"', start_quote+1)
+    url = page[start_quote+1:end_quote]
+    return url, end_quote
+# en la siguiente lína se asignan los valores de url y de endquote a las variables url y endpos.
+url, endpos = def get_next_target(page)
+
+page = page[end_quote:]
+
+start_link = page.find("<href=")
+start_quote = page.find(""", start_link)
+end_quote = page.find (""", start_quote+1)
+url = page[start_quote+1:end_quote]
+print url
+
+# Ejercicio 29:
+
+def get_next_target(page):
+    start_link = page.find('<a href=')
+    
+        # if the link tag sequence is not found, find returns a -1
+    if start_link == -1:
+        # return the error codes of None, 0 now and skip the rest!
+        return = None, 0
+    
+    start_quote = page.find('"', start_link)
+    end_quote = page.find('"', start_quote + 1)
+    url = page[start_quote + 1:end_quote]
+    return url, end_quote
+    
+url, endpos = def get_next_target(page)
+    
+# Ejercicio 30:
+
+def get_next_target(page):
+    start_link = page.find('<a href=')
+        if start_link == -1:
+            return = None, 0
+        start_quote = page.find('"', start_link)
+    end_quote = page.find('"', start_quote + 1)
+    url = page[start_quote + 1:end_quote]
+    return url, end_quote
+    
+url, endpos = def get_next_target(page)
+
+page = page[endpos:]
+
+url, endpos = def get_next_target(page)
+
+page = page[endpos:]
+
+url, endpos = def get_next_target(page) 
+
+def print_all_url(page):
+    while True:
+        url, endpos = def get_next_target(page)
+        if url:
+            print url
+            page=page[endpos:]
+    else: 
+        break
+    
