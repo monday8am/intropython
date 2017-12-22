@@ -265,7 +265,7 @@ def get_next_target(page):
     start_link = page.find('<a href=')
         if start_link == -1:
             return = None, 0
-        start_quote = page.find('"', start_link)
+    start_quote = page.find('"', start_link)
     end_quote = page.find('"', start_quote + 1)
     url = page[start_quote + 1:end_quote]
     return url, end_quote
@@ -288,4 +288,117 @@ def print_all_url(page):
             page=page[endpos:]
     else: 
         break
+        
+        
+# Ejercicios de repaso:
+
+# Ejercicio 3: Median
+ef bigger(a,b):
+    if a > b:
+        return a
+    else:
+        return b
+
+def biggest(a,b,c):
+    return bigger(a,bigger(b,c))
+
+def smallest(a,b,c):
+    return smaller(a,smaller(b,c))
+
+def median(a,b,c):
+    big = biggest(a,b,c)
+    if big == a:
+        return bigger(b,c)
+    if big == b:
+        return bigger(a,c)
+    else:
+        return bigger(a,b)
+
+print(median(1,2,3))
+#>>> 2
+
+print(median(9,3,6))
+#>>> 6
+
+print(median(7,8,7))
+#>>> 7
+
+# Ejercicio 4: Blastoff!
+# Define a procedure, countdown, that takes a
+# positive whole number as its input, and prints
+# out a countdown from that number to 1,
+# followed by Blastoff!
+# The procedure should not return anything.
+# For this question, you just need to call 
+# the procedure using the line
+# countdown(3)
+# instead of print countdown(3).
+
+def countdown(n):
+    n > 0
+    while n > 0:
+        print n
+        n = n-1
+    else: 
+        print "Blastoff!"
+
+print countdown(6)
+
+# Ejercicio 6: Find Last
+
+# Define a procedure, find_last, that takes as input
+# two strings, a search string and a target string,
+# and returns the last position in the search string
+# where the target string appears, or -1 if there
+# are no occurrences.
+#
+# Example: find_last('aaaa', 'a') returns 3
+
+# Make sure your procedure has a return statement.
+
+# Mi solución:
+def find_last(a,b):
+    first_pos = a.find(b)
+    next_pos = a.find(b,first_pos+1)
+    if next_pos == -1:
+        return first_pos
+    else: 
+        while next_pos != -1:
+            first_pos = first_pos + 1
+            next_pos = a.find(b,first_pos+1)
+        else:
+            return first_pos
     
+# La solución del profesor: 
+def find_last(s,t):
+    last_pos = -1
+    while True
+        pos = s.find(t, last_pos+1)
+        if pos == -1:
+            return last_post
+        last_post = pos
+
+
+print find_last('aaaa', 'a')
+#>>> 3
+
+print find_last('aaaaa', 'aa')
+#>>> 3
+
+print find_last('aaaa', 'b')
+#>>> -1
+
+print find_last("111111111", "1")
+#>>> 8
+
+print find_last("222222222", "")
+#>>> 9
+
+print find_last("", "3")
+#>>> -1
+
+print find_last("", "")
+#>>> 0
+
+
+
